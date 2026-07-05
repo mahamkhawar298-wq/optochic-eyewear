@@ -1094,7 +1094,6 @@ function OrderTrackingPage({ setCurrentTab }) {
       setTrackingStatus(`✅ Order found! Order #${foundOrder.orderNumber}`);
       setStatusProgress(0);
       
-      // Simulate tracking status updates
       const statuses = [
         "📦 Order Confirmed",
         "🔄 Processing",
@@ -2048,11 +2047,58 @@ function HomePage({ setCurrentTab, setSelectedProduct }) {
           </RevealOnScroll>
           <RevealOnScroll direction="up" className="video-container">
             <div className="video-wrapper">
-              <iframe allow="autoplay; gyroscope;" allowFullScreen referrerPolicy="strict-origin" src="https://www.kapwing.com/e/6a319af81dcf8f37b6c3e94b" title="OptoChic Showreel" />
+              <div style={{ 
+                height: 0, 
+                paddingBottom: '56.25%', 
+                position: 'relative', 
+                width: '100%',
+                borderRadius: '16px',
+                overflow: 'hidden',
+                background: '#0a0a0a'
+              }}>
+                <iframe 
+                  allow="autoplay; gyroscope;" 
+                  allowFullScreen 
+                  height="100%" 
+                  referrerPolicy="strict-origin" 
+                  src="https://www.kapwing.com/e/6a4a5590567936352e1b02e2" 
+                  style={{
+                    border: 0,
+                    height: '100%',
+                    left: 0,
+                    overflow: 'hidden',
+                    position: 'absolute',
+                    top: 0,
+                    width: '100%'
+                  }} 
+                  title="OptoChic Showreel" 
+                  width="100%"
+                />
+              </div>
+              <p style={{ 
+                fontSize: '12px', 
+                textAlign: 'right',
+                marginTop: '8px',
+                color: 'rgba(255,255,255,0.3)'
+              }}>
+                Video edited on <a 
+                  href="https://www.kapwing.com/video-editor" 
+                  style={{ color: '#B58D67', textDecoration: 'none' }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Kapwing
+                </a>
+              </p>
             </div>
             <div className="video-footer">
-              <div><span className="video-tag">LIVE SHOWREEL</span><p>Featuring active models across Seoul & Shanghai.</p></div>
-              <button className="btn-gold" onClick={() => setCurrentTab("shop")}>Shop Featured Looks</button>
+              <div>
+                <span className="video-tag">LIVE SHOWREEL</span>
+                <p>Featuring active models across Seoul & Shanghai.</p>
+              </div>
+              <button className="btn-gold" onClick={() => setCurrentTab("shop")}>
+                Shop Featured Looks
+              </button>
             </div>
           </RevealOnScroll>
         </div>
