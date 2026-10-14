@@ -2049,19 +2049,16 @@ function HomePage({ setCurrentTab, setSelectedProduct }) {
             <div className="video-wrapper">
               <div style={{ 
                 height: 0, 
-                paddingBottom: '56.25%', 
+                paddingBottom: 'calc(56.25%)', 
                 position: 'relative', 
-                width: '100%',
-                borderRadius: '16px',
-                overflow: 'hidden',
-                background: '#0a0a0a'
+                width: '100%' 
               }}>
                 <iframe 
                   allow="autoplay; gyroscope;" 
                   allowFullScreen 
                   height="100%" 
                   referrerPolicy="strict-origin" 
-                  src="https://www.kapwing.com/e/6a4a5590567936352e1b02e2" 
+                  src="https://www.kapwing.com/e/6acff699d555c3e48678eed2" 
                   style={{
                     border: 0,
                     height: '100%',
@@ -2071,7 +2068,7 @@ function HomePage({ setCurrentTab, setSelectedProduct }) {
                     top: 0,
                     width: '100%'
                   }} 
-                  title="OptoChic Showreel" 
+                  title="Embedded content made on Kapwing" 
                   width="100%"
                 />
               </div>
